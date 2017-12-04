@@ -3,6 +3,8 @@ package application;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.jfoenix.controls.JFXButton;
+
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,8 +27,12 @@ public class Controller implements Initializable {
 
 	@FXML
 	private Label countLabel;
-	
 
+	@FXML
+	private JFXButton btnSkip;
+
+	@FXML
+	private Label lblSkippedTuto;
 
 	public void translateAnimation(double duration, Node node, double byX) {
 
@@ -46,17 +52,14 @@ public class Controller implements Initializable {
 
 	@FXML
 	void nextAction(ActionEvent event) {
-
 		if (showSlide == 0) {
 			translateAnimation(0.5, pane2, -600);
 			showSlide++; // showSlide=1
 			countLabel.setText("2/3");
 		} else if (showSlide == 1) {
-
 			translateAnimation(0.5, pane3, -600);
 			showSlide++; // showSlide=2
 			countLabel.setText("3/3");
-
 		} else {
 			System.out.println("No more slides");
 		}
@@ -67,7 +70,7 @@ public class Controller implements Initializable {
 	void backAction(ActionEvent event) {
 
 		if (showSlide == 0) {
-			System.out.println("No more slide");
+			System.out.println("No more slides");
 		} else if (showSlide == 1) {
 			translateAnimation(0.5, pane2, 600);
 			showSlide--; // showSlide=0
@@ -80,4 +83,16 @@ public class Controller implements Initializable {
 
 	}
 
+	@FXML
+	void skipIntroAndCloseApp(ActionEvent event) {
+		translateAnimation(0.5, pane2, -600);
+		translateAnimation(1, pane3, -600);
+		lblSkippedTuto.setText("You skipped the intro D:");
+		System.exit(0);
+	}
+
+	@FXML
+	void closeApp(ActionEvent event) {
+		System.exit(0);
+	}
 }
