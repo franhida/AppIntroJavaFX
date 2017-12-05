@@ -7,13 +7,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<AnchorPane prefHeight="600.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <children>
       <AnchorPane fx:id="pane1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #0090e4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="176.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@SignIn.png" />
+                  <Image url="@img/SignIn.png" />
                </image>
             </ImageView>
             <Label layoutX="196.0" layoutY="77.0" text="Welcome" textFill="WHITE">
@@ -36,7 +36,7 @@
             <Label layoutX="135.0" layoutY="117.0" prefHeight="68.0" prefWidth="214.0" text="You can create new Chats and Groups from the upper-left button (Hamburguer Button)" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="171.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@FastOptions.PNG" />
+                  <Image url="@img/FastOptions.PNG" />
                </image>
             </ImageView>
          </children>
@@ -53,7 +53,7 @@
             <Label fx:id="lblSkippedTuto" layoutX="123.0" layoutY="195.0" text="Thanks for not skipping the Intro :D" textFill="WHITE" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="165.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@tg.png" />
+                  <Image url="@img/tg.png" />
                </image>
             </ImageView>
          </children>

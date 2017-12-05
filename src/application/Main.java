@@ -30,7 +30,7 @@ public class Main extends Application {
 	public void mainWindow() {
 		try {
 
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ventana.fxml"));
 			AnchorPane pane = loader.load();
 			stage.initStyle(StageStyle.UNDECORATED);
 			stage.setScene(new Scene(pane));
